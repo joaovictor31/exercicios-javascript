@@ -10,3 +10,30 @@ Enunciado: CONTADOR COM CORES PARA NEGATIVOS, ZERO E POSITIVOS
     No caso do valor ser positivo o texto deve ser verde puro.
 
 ---------------------------------------------------------------------------- */
+valor = 0 
+const h1_valor = document.getElementById('valor');
+const adicionar = document.getElementById('btn_incremento');
+const remover = document.getElementById('btn_decremento');
+
+
+
+function add(){
+    if (valor >= 0){
+        valor += 1;
+        h1_valor.textContent = valor;
+        h1_valor.style.color = 'green';
+    }
+
+}
+
+function dele(){
+    if(valor <= 0){
+        valor -= 1;
+        h1_valor.textContent = valor;
+        h1_valor.style.color = 'red';
+    }
+    
+}
+
+adicionar.addEventListener('click',add);
+remover.addEventListener('click',dele);
